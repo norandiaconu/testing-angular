@@ -1,0 +1,60 @@
+.app {
+    text-align: center;
+}
+.nav {
+    margin: 0 0 10px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+a {
+    background: #3a4250;
+    padding: 4px 10px;
+    margin: 0 2px;
+    border-radius: 2px;
+}
+a.active {
+    background: purple;
+}
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 4px;
+    width: 0%;
+    background: purple;
+}
+.flexbox-container {
+    background-color: darkgrey;
+    height: 200px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: row;
+}
+.flexbox-item {
+    width: 100px;
+    margin: 10px;
+    border: 3px solid purple;
+    background-color: gray;
+}
+.flexbox-item-1 {
+    min-height: 50px;
+    flex-shrink: 1;
+    align-self: flex-end;
+    order: 2;
+}
+.flexbox-item-2 {
+    min-height: 100px;
+    flex-grow: 3;
+    order: 3; 
+}
+.flexbox-item-3 {
+    min-height: 150px;
+    flex-grow: 1;
+    order: 1;
+}

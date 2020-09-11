@@ -1,0 +1,28 @@
+{
+  "passengers": [
+    {
+      "fullName": "Stephen",
+      "id": 1,
+      "checkedIn": true,
+      "baggage": "none",
+      "checkedInDate": 1595271717001
+    },
+    {
+      "id": 2,
+      "fullName": "Rose",
+      "checkedIn": false,
+      "baggage": "hand-only",
+      "checkedInDate": null,
+      "children": [
+        {
+          "name": "Ted",
+          "age": 12
+        },
+        {
+          "name": "Chloe",
+          "age": 7
+        }
+      ]
+    }
+  ]
+}

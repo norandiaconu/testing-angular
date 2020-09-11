@@ -1,0 +1,30 @@
+Dog Polling:<br/>
+<button (click)="dogSub()" title="Start dog subscription" id="dogSub">
+    {{ subscribed ? 'Unsub' : 'Dog Sub'}}</button>
+<button (click)="dogStart()" title="Start and stop dog polling" id="dogStart">Start Polling</button>
+<button (click)="dogStop()" title="Start and stop dog polling" id="dogStop">Stop Polling</button>
+Polling: {{ polling }}
+<br/><br/>
+<img id="dog" alt="dog" style="height: 190px"
+    src="https://random.dog/967eae80-8f34-490b-944c-4f6bd4697712.jpeg"/>
+<video id="dogVid" alt="dog" style="height: 190px"
+    src="https://random.dog/c494d883-9a34-4d8d-b0b3-449069c30f23.mp4" autoplay loop>
+    <track label="English" kind="subtitles">
+</video>
+<br/><br/>
+Mortgage Calculator:<br/>
+<button (click)="mortgageSub()" title="Start mortgage subscription" id="mortgageSub">
+    {{ subscribed ? 'Unsub' : 'Mortgage Sub'}}</button>
+<br/>
+<label for="loanAmount">Mortgage Amount ($)</label>
+<input type="number" name="loanAmount" id="loanAmount">
+<br/>
+<label for="interest">Interest Rate (%)</label>
+<input type="number" name="interest" id="interest">
+<br/>
+<label for="loanLength">Mortgage Length</label>
+<input type="radio" name="loanLength" class="loanLength" value="180"> 15 yr
+<input type="radio" name="loanLength" class="loanLength" value="360"> 30 yr
+<br/><br/>
+Your expected monthly payment is:
+$<strong id="expected"></strong>

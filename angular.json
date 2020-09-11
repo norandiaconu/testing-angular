@@ -3,21 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "testing-angular": {
+    "angular-fundamentals": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/testing-angular",
+            "outputPath": "dist/angular-fundamentals",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "testing-angular:build"
+            "browserTarget": "angular-fundamentals:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "testing-angular:build:production"
+              "browserTarget": "angular-fundamentals:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "testing-angular:build"
+            "browserTarget": "angular-fundamentals:build"
           }
         },
         "test": {
@@ -114,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "testing-angular:serve"
+            "devServerTarget": "angular-fundamentals:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "testing-angular:serve:production"
+              "devServerTarget": "angular-fundamentals:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "testing-angular"
+  "defaultProject": "angular-fundamentals"
 }

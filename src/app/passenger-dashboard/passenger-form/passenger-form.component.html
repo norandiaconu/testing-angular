@@ -1,0 +1,102 @@
+<form
+    (ngSubmit)="handleSubmit(form.value, form.valid)"
+    #form="ngForm"
+    novalidate>
+    {{ detail | json }}
+    <div>
+        Passenger name:
+        <input
+            type="text"
+            name="fullName"
+            required
+            minlength="2"
+            #fullName="ngModel"
+            [ngModel]="detail?.fullName">
+            {{ fullName.errors | json }}
+            <div *ngIf="fullName.errors?.required && fullName.dirty" class="error">
+                Passenger name is required
+            </div>
+            <div *ngIf="fullName.errors?.minlength && fullName.dirty" class="error">
+                Passenger name length must be greater than 2
+            </div>
+    </div>
+    <div>
+        Passenger ID:
+        <input
+            type="number"
+            name="id"
+            required
+            #id="ngModel"
+            [ngModel]="detail?.id">
+        {{ id.errors | json }}
+        <div *ngIf="id.errors?.required && id.touched" class="error">
+            Passenger id is required
+        </div>
+    </div>
+    <div>
+        <label>
+            <input
+                type="radio"
+                [value]="true"
+                name="checkedIn"
+                [ngModel]="detail?.checkedIn"
+                (ngModelChange)="toggleCheckedIn($event)">
+            Yes
+        </label>
+        <label>
+            <input
+                type="radio"
+                [value]="false"
+                name="checkedIn"
+                [ngModel]="detail?.checkedIn">
+            No
+        </label>
+        <label>
+            <input
+                type="checkbox"
+                name="checkedIn"
+                [ngModel]="detail?.checkedIn"
+                (ngModelChange)="toggleCheckedIn($event)">
+        </label>
+        Toggle check in date
+    </div>
+    <div *ngIf="form.value.checkedIn">
+        Check in date:
+        <input
+            type="number"
+            name="checkedInDate"
+            [ngModel]="detail?.checkedInDate">
+    </div>
+    
+    <div>
+        Luggage:
+        <select
+            name="baggage"
+            [ngModel]="detail?.baggage">
+            <option
+                *ngFor="let item of baggage"
+                [value]="item.key"
+                [selected]="item.key === detail?.baggage">
+                {{ item.value }}
+            </option>
+        </select>
+        <select
+            name="baggage"
+            [ngModel]="detail?.baggage">
+            <option
+                *ngFor="let item of baggage"
+                [ngValue]="item.key">
+                {{ item.value }}
+            </option>
+        </select>
+    </div>
+    {{ form.value | json }}
+    <div>
+        Valid: {{ form.valid | json }} &bull;
+        Invalid: {{ form.invalid | json }}
+    </div>
+    <button type="submit" [disabled]="form.invalid">
+        Update passenger
+    </button>
+</form>
+

@@ -1,0 +1,30 @@
+<div>
+    <button (click)="multiplier()"
+        title="Parameters can be assigned a default value in case one is not passed in">
+    {{ subscribed ? 'Unsubscribe' : 'Default Function Parameters'}}</button>
+    <button (click)="createOrder()"
+        title="Pass parameters to a function call">
+    {{ subscribed ? 'Unsubscribe' : 'Create Order'}}</button>
+    <button (click)="sumAll()"
+        title="Add all the passed in parameters">
+    {{ subscribed ? 'Unsubscribe' : 'Sum All'}}</button>
+    <button (click)="concatArrays()"
+        title="Combine arrays">
+    {{ subscribed ? 'Unsubscribe' : 'Concat Arrays'}}</button>
+    <button (click)="spreadOperator()"
+        title="Spread operator">
+    {{ subscribed ? 'Unsubscribe' : 'Spread Operator'}}</button>
+    <br/><br/>
+    <button (click)="destructure()"
+        title="Destructure arrays and objects">
+    {{ subscribed ? 'Unsubscribe' : 'Destructure'}}</button>
+    <button (click)="allowNull()"
+        title="Allow passing a string or null to a function">
+    {{ subscribed ? 'Unsubscribe' : 'Allow Null'}}</button>
+    <button (click)="literalTypes()"
+        title="Only allow specific values to be passed in">
+    {{ subscribed ? 'Unsubscribe' : 'Literal Types'}}</button>
+    <button (click)="functionTypes()"
+        title="Set function to a variable">
+    {{ subscribed ? 'Unsubscribe' : 'Function Types'}}</button>
+</div>

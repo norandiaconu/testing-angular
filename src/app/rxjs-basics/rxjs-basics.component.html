@@ -1,0 +1,94 @@
+<div>
+    Button presses: {{ amount }}
+</div>
+<div>
+    General:
+    <button (click)="helloWorld()">Hello World</button> &bull;
+    <button (click)="setTimeout()">Set Timeout</button> &bull;
+    <button (click)="countOnce()">Count Once</button> &bull;
+    <button (click)="intervalTimer()">Interval Timer</button> &bull;
+    <button (click)="fetch()">Fetch</button>
+    <br/><br/>Looping:
+    <button (click)="ofSubscription()">Of Subscription</button> &bull;
+    <button (click)="range()">Range</button> &bull;
+    <button (click)="from()">From</button> &bull;
+    <button (click)="ofPipe()">Of Pipe</button> &bull;
+    <button (click)="ofFilter()">Of Filter</button> &bull;
+    <button (click)="reducer()">Reducer</button> &bull;
+    <button (click)="scan()">Scan</button> &bull;
+    <button (click)="take()" id="take">Take</button>
+    <br/><br/>
+    <button (click)="takeWhile()">Take While</button> &bull;
+    <button (click)="takeUntil()">Take Until</button> &bull;
+    <button (click)="distinctUntilChanged()">Distinct Until Changed</button>
+    <br/><br/>Event:
+    <span *ngIf="displayCount">
+        <button (click)="keyCount()">Key Count</button> &bull;
+    </span>
+    <span *ngIf="displayMouse">
+        <button (click)="mouseClickEvent()">Mouse Event</button> &bull;
+    </span>
+    <span *ngIf="displayKeys">
+        <button (click)="keyCodes()">Key Codes</button> &bull;
+    </span>
+    <span *ngIf="displayKeys">
+        <button (click)="scrollBar()">{{ subscribed ? 'Unsubscribe' : 'Scroll Bar'}}</button> &bull;
+    </span>
+    <button (click)="restartEvents()">Restart Events</button>
+    <div *ngIf="displayText">
+        <br *ngFor="let i of [].constructor(100)"/>
+    </div>
+    <br/><br/>
+    <button (click)="countdown()">Countdown</button> {{ theCountdown }}
+    <button id="abort">Abort Mission</button>
+    <hr>
+    <input id="timeText">
+    <br/><br/>Rate Limiting:
+    <button (click)="debounceTime()">{{ subscribed ? 'Unsubscribe' : 'Debounce Time'}}</button> &bull;
+    <button (click)="throttleTime()">{{ subscribed ? 'Unsubscribe' : 'Throttle Time'}}</button> &bull;
+    <button (click)="sampleTime()">{{ subscribed ? 'Unsubscribe' : 'Sample Time'}}</button> &bull;
+    <button (click)="sample()">{{ subscribed ? 'Unsubscribe' : 'Sample'}}</button> &bull;
+    <button (click)="auditTime()">{{ subscribed ? 'Unsubscribe' : 'Audit Time'}}</button>
+    <br/><br/>Transformation:
+    <button (click)="ajax()" title="Get and return JSON api request responses">
+        {{ subscribed ? 'Unsubscribe' : 'Ajax'}}</button> &bull;
+    <button (click)="mergeMap()" title="Start on each run">
+        {{ subscribed ? 'Unsubscribe' : 'Merge Map'}}</button> &bull;
+    <button (click)="switchMap()"
+            title="Restart on each run">
+        {{ subscribed ? 'Unsubscribe' : 'Switch Map'}}</button> &bull;
+    <button (click)="concatMap()"
+        title="Queue onto the end of each run">
+    {{ subscribed ? 'Unsubscribe' : 'Concat Map'}}</button> &bull;
+    <button (click)="exhaustMap()"
+        title="Complete current run, then allow a new one to start">
+    {{ subscribed ? 'Unsubscribe' : 'Exhaust Map'}}</button>
+    <br/><br/>
+    <div id="typeahead"></div>
+    Combination Operators:
+    <button (click)="startWith()"
+        title="Start and end with specified values">
+    {{ subscribed ? 'Unsubscribe' : 'Start With'}}</button>
+    <button (click)="concat()"
+        title="Order events to run one after another">
+    {{ subscribed ? 'Unsubscribe' : 'Concat'}}</button>
+    <button (click)="merge()"
+        title="Start and end with specified values">
+    {{ subscribed ? 'Unsubscribe' : 'Merge'}}</button>
+    <button (click)="withLatestFrom()"
+        title="Include latest value from stream that is passed in">
+    {{ subscribed ? 'Unsubscribe' : 'With Latest From'}}</button>
+    <button (click)="forkJoin()"
+        title="Combine latest values before emitting">
+    {{ subscribed ? 'Unsubscribe' : 'Fork Join'}}</button>
+    <br/><br/>
+    <button id="countdown2" (click)="countdown2()">{{ subscribed ? 'Start' : 'Countdown'}}</button> {{ theCountdown }}
+    <button id="abort2">Abort Mission</button>
+    <br/><br/>
+    <button (click)="combineLatest()"
+        title="Emit latest values when all passed observables have fired at least once">
+    {{ subscribed ? 'Unsubscribe' : 'Combine Latest'}}</button>
+    <input type="number" id="first">
+    <input type="number" id="second">
+    <br/><br/>
+</div>
