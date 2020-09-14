@@ -59,6 +59,7 @@ export class AppComponent {
 
   constructor() {
     this.title = "Ultimate Angular";
+    console.log("test");
   }
 
   handleInput(event: any): void {
