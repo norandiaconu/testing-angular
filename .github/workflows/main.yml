@@ -27,11 +27,11 @@ jobs:
         run: |
            npm install -g @angular/cli
            npm install
-           ng build --prod --base-href="/testing-angular/"
+           ng build --prod --base-href="https://norandiaconu.github.io/testing-angular/" --output-path dist
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v2
         env:
           ACCESS_TOKEN: 438448e462962b53556e702f9257364e972e5b4e
           BASE_BRANCH: master
           BRANCH: gh-pages
-          FOLDER: dist/testing-angular
+          FOLDER: dist
